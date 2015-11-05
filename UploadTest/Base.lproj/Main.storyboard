@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="SZD-xm-l0o">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intergalatic Travel, Inc.-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UploadTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-mY-wPx">
+                                <rect key="frame" x="200" y="232" width="200" height="30"/>
+                                <state key="normal" title="Visit Red Dwarf"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Ke-Rz4">
+                                <rect key="frame" x="200" y="339" width="200" height="30"/>
+                                <state key="normal" title="Visit Blue Star"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TzG-Ke-Rz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IZB-5H-eKv"/>
+                            <constraint firstItem="TzG-Ke-Rz4" firstAttribute="top" secondItem="cnb-mY-wPx" secondAttribute="bottom" constant="77" id="fXz-49-SFD"/>
+                            <constraint firstItem="cnb-mY-wPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jII-ZE-Vjh"/>
+                            <constraint firstItem="TzG-Ke-Rz4" firstAttribute="top" secondItem="cnb-mY-wPx" secondAttribute="bottom" constant="77" id="onu-V0-9Gp"/>
+                            <constraint firstItem="cnb-mY-wPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfC-wJ-813"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Intergalatic Travel, Inc." id="Iix-Wm-0cI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1123" y="349"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gyT-Ht-zfw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SZD-xm-l0o" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CC8-v0-5ZC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Wqa-o5-deS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8nt-0W-ufn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="349"/>
         </scene>
     </scenes>
 </document>
