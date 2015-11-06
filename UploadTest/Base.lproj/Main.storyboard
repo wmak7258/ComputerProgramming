@@ -20,10 +20,16 @@
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-mY-wPx">
                                 <rect key="frame" x="200" y="232" width="200" height="30"/>
                                 <state key="normal" title="Visit Red Dwarf"/>
+                                <connections>
+                                    <segue destination="vRW-Ft-zFt" kind="show" id="2oG-54-peQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Ke-Rz4">
                                 <rect key="frame" x="200" y="339" width="200" height="30"/>
                                 <state key="normal" title="Visit Blue Star"/>
+                                <connections>
+                                    <segue destination="vRW-Ft-zFt" kind="show" id="Dak-rr-FcT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -40,6 +46,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1123" y="349"/>
+        </scene>
+        <!--Image View Controller-->
+        <scene sceneID="3Oa-YI-yID">
+            <objects>
+                <viewController id="vRW-Ft-zFt" customClass="ImageViewController" customModule="UploadTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="f2C-Ke-Eyh"/>
+                        <viewControllerLayoutGuide type="bottom" id="ROY-U3-2S6"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="3y3-dT-OyS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5PF-eE-8Oj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1866" y="349"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gyT-Ht-zfw">
@@ -60,4 +84,7 @@
             <point key="canvasLocation" x="340" y="349"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Dak-rr-FcT"/>
+    </inferredMetricsTieBreakers>
 </document>
