@@ -17,35 +17,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-mY-wPx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnb-mY-wPx">
                                 <rect key="frame" x="200" y="232" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TmA-MA-jcM"/>
+                                </constraints>
                                 <state key="normal" title="Visit Red Dwarf"/>
                                 <connections>
-                                    <segue destination="vRW-Ft-zFt" kind="show" id="2oG-54-peQ"/>
+                                    <segue destination="vRW-Ft-zFt" kind="show" identifier="redDwarfSegue " id="2oG-54-peQ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Ke-Rz4">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TzG-Ke-Rz4">
                                 <rect key="frame" x="200" y="339" width="200" height="30"/>
                                 <state key="normal" title="Visit Blue Star"/>
                                 <connections>
-                                    <segue destination="vRW-Ft-zFt" kind="show" id="Dak-rr-FcT"/>
+                                    <segue destination="vRW-Ft-zFt" kind="show" identifier="blueStarSegue" id="Dak-rr-FcT"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="TzG-Ke-Rz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IZB-5H-eKv"/>
+                            <constraint firstItem="TzG-Ke-Rz4" firstAttribute="top" secondItem="cnb-mY-wPx" secondAttribute="bottom" constant="77" id="RyR-Kk-Gac"/>
                             <constraint firstItem="TzG-Ke-Rz4" firstAttribute="top" secondItem="cnb-mY-wPx" secondAttribute="bottom" constant="77" id="fXz-49-SFD"/>
                             <constraint firstItem="cnb-mY-wPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jII-ZE-Vjh"/>
                             <constraint firstItem="TzG-Ke-Rz4" firstAttribute="top" secondItem="cnb-mY-wPx" secondAttribute="bottom" constant="77" id="onu-V0-9Gp"/>
+                            <constraint firstItem="cnb-mY-wPx" firstAttribute="leading" secondItem="TzG-Ke-Rz4" secondAttribute="leading" id="qOG-UD-8mr"/>
+                            <constraint firstItem="cnb-mY-wPx" firstAttribute="trailing" secondItem="TzG-Ke-Rz4" secondAttribute="trailing" id="qvE-2D-myQ"/>
                             <constraint firstItem="cnb-mY-wPx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vfC-wJ-813"/>
+                            <constraint firstItem="cnb-mY-wPx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="168" id="ydi-5Q-cHC"/>
+                            <constraint firstItem="TzG-Ke-Rz4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zMW-F9-sfu"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jII-ZE-Vjh"/>
+                                <exclude reference="vfC-wJ-813"/>
+                                <exclude reference="IZB-5H-eKv"/>
+                                <exclude reference="fXz-49-SFD"/>
+                                <exclude reference="onu-V0-9Gp"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Intergalatic Travel, Inc." id="Iix-Wm-0cI"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="349"/>
+            <point key="canvasLocation" x="1169" y="349"/>
         </scene>
         <!--Image View Controller-->
         <scene sceneID="3Oa-YI-yID">
@@ -85,6 +102,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Dak-rr-FcT"/>
+        <segue reference="2oG-54-peQ"/>
     </inferredMetricsTieBreakers>
 </document>
